@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Care Lemke UG – Kinder- und Jugendhilfe</title>
+  <meta name="description" content="Family Care Lemke UG – Privater freier Träger der Kinder- und Jugendhilfe. Unterstützung für Kinder, Jugendliche und Familien. Alles aus einer Hand.">
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="main-page">
+
+  <!-- ════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Family Care</h1>
+      <h2 class="hero-subtitle">Privater freier Träger der Kinder- und Jugendhilfe</h2>
+      <p class="hero-body">Unterstützung für Kinder, Jugendliche und Familien</p>
+      <p class="hero-tagline">Alles aus einer Hand</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SERVICES SECTION  (hidden until hero fades)
+  ════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="services-scaler">
+      <div class="services-container">
+
+        <!-- Dashed connecting lines (SVG, z-index 1, behind everything) -->
+        <!--
+          Container: 980×980  |  Center: (490, 490)  |  Orbit radius: 320
+          Lines: inner at r=100 from center, outer at r=170 (= orbit 320 – circle-radius 150).
+          Angles (CW from top):
+            0°   → Soziale Beratung     (pink)
+            60°  → ambulante Hilfe      (yellow)
+            120° → Wer wir sind         (green)
+            180° → Start-up             (pink)
+            240° → Begleiteter Umgang   (yellow)
+            300° → Erinnerungskontakte  (green)
+        -->
+        <svg class="orbit-svg" viewBox="0 0 980 980" xmlns="http://www.w3.org/2000/svg">
+          <!-- 0° top: (490,390)→(490,320) -->
+          <line class="orbit-line" stroke="#F553A0"
+            x1="490" y1="390" x2="490" y2="320"/>
+          <!-- 60° top-right: (577,440)→(637,405) -->
+          <line class="orbit-line" stroke="#F5B730"
+            x1="577" y1="440" x2="637" y2="405"/>
+          <!-- 120° bottom-right: (577,540)→(637,575) -->
+          <line class="orbit-line" stroke="#6DB89A"
+            x1="577" y1="540" x2="637" y2="575"/>
+          <!-- 180° bottom: (490,590)→(490,660) -->
+          <line class="orbit-line" stroke="#F553A0"
+            x1="490" y1="590" x2="490" y2="660"/>
+          <!-- 240° bottom-left: (403,540)→(343,575) -->
+          <line class="orbit-line" stroke="#F5B730"
+            x1="403" y1="540" x2="343" y2="575"/>
+          <!-- 300° top-left: (403,440)→(343,405) -->
+          <line class="orbit-line" stroke="#6DB89A"
+            x1="403" y1="440" x2="343" y2="405"/>
+        </svg>
+
+        <!-- Logo center -->
+        <div class="logo-center">
+          <img src="references/logo-family-care.png" alt="Family Care Lemke Logo">
+        </div>
+
+        <!-- ── Circle 1: Soziale Beratung (0°, pink) ── -->
+        <div class="circle-wrapper"
+             style="--angle:0deg; --float-dur:5.2s; --float-delay:-0.8s;">
+          <div class="circle-float">
+            <div class="circle-card pink">
+              <div class="card-front">
+                <span>Soziale<br>Beratung</span>
+              </div>
+              <div class="card-back">
+                <p>Beratung für Kinder, Jugendliche, Erwachsene und Familien – vertraulich, lösungsorientiert und ohne Wartezeit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Circle 2: Ambulante Hilfe (60°, yellow) ── -->
+        <div class="circle-wrapper"
+             style="--angle:60deg; --float-dur:6.1s; --float-delay:-2.3s;">
+          <div class="circle-float">
+            <div class="circle-card yellow">
+              <div class="card-front">
+                <span>Ambulante<br>Hilfe</span>
+              </div>
+              <div class="card-back">
+                <p>Sozialpädagogische Familienhilfe (SPFH), Erziehungsbeistandschaft und Hilfe für junge Volljährige – direkt im Lebensumfeld der Familie.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Circle 3: Wer wir sind (120°, green) ── -->
+        <div class="circle-wrapper"
+             style="--angle:120deg; --float-dur:4.8s; --float-delay:-1.5s;">
+          <div class="circle-float">
+            <div class="circle-card green">
+              <div class="card-front">
+                <span>Wer wir<br>sind</span>
+              </div>
+              <div class="card-back">
+                <p>Family Care ist ein privater freier Träger der Kinder- und Jugendhilfe. Unterstützung für Kinder, Jugendliche und Familien – alles aus einer Hand.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Circle 4: Start-up / Komm zu uns (180°, pink) ── -->
+        <div class="circle-wrapper"
+             style="--angle:180deg; --float-dur:5.7s; --float-delay:-3.1s;">
+          <div class="circle-float">
+            <div class="circle-card pink">
+              <div class="card-front">
+                <span>Start-up<br><small style="font-size:0.9em;">Komm zu uns</small></span>
+              </div>
+              <div class="card-back">
+                <p>Werde Teil von Family Care. Wir suchen Schulbegleiter:innen im Landkreis Mittelsachsen. Quereinsteiger willkommen.</p>
+                <a href="stellenausschreibung.html" class="cta-btn">Stellenanzeige ansehen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Circle 5: Begleiteter Umgang (240°, yellow) ── -->
+        <div class="circle-wrapper"
+             style="--angle:240deg; --float-dur:6.4s; --float-delay:-0.4s;">
+          <div class="circle-float">
+            <div class="circle-card yellow">
+              <div class="card-front">
+                <span>Begleiteter<br>Umgang</span>
+              </div>
+              <div class="card-back">
+                <p>Professionelle Begleitung bei Umgangskontakten zwischen Elternteilen und Kindern – sicher, neutral und kindgerecht. Inkl. Erinnerungskontakte.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Circle 6: Erinnerungskontakte (300°, green) ── -->
+        <div class="circle-wrapper"
+             style="--angle:300deg; --float-dur:5.5s; --float-delay:-2.7s;">
+          <div class="circle-float">
+            <div class="circle-card green">
+              <div class="card-front">
+                <span>Erinnerungs-<br>kontakte</span>
+              </div>
+              <div class="card-back">
+                <p>Manchmal reißt der Kontakt ab. Wir melden uns aktiv bei Familien, wenn vereinbarte Termine nicht wahrgenommen wurden. Ohne Druck und ohne Vorwürfe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- .services-container -->
+    </div><!-- .services-scaler -->
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <h3>Family Care Lemke UG</h3>
+
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Goldbornstr. 2, 04741 Roßwein</span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+          <a href="tel:+4915566776144">0155 / 66 77 61 44</a>
+        </div>
+
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:l.lemke@lemke.care">l.lemke@lemke.care</a>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+        <img src="references/logo-family-care.png" alt="Family Care Lemke Logo">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Family Care Lemke UG (haftungsbeschränkt)</span>
+      <div>
+        <a href="impressum.html">Impressum</a>
+        &nbsp;·&nbsp;
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
