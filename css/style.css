@@ -278,9 +278,30 @@ html, body {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.55;
+  padding-top: 2.4rem;
 }
 
 .card-back p { margin-bottom: 0; }
+
+.card-back a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.card-back .cta-btn {
+  text-decoration: none;
+}
+
+.wer-wir-sind .card-back {
+  padding-top: calc(2.4rem - 5px);
+}
+
+.pink .card-back {
+  justify-content: flex-start;
+  padding-top: calc(7rem - 50px);
+  padding-left: calc(1.4rem + 20px);
+  padding-right: calc(1.4rem + 20px);
+}
 
 .cta-btn {
   display: inline-block;
