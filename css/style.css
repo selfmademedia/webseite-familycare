@@ -2,8 +2,48 @@
    Family Care Lemke UG – Shared Styles
    =================================================== */
 
-@import url('https://fonts.cdnfonts.com/css/more-sugar');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* More Sugar – lokal */
+@font-face {
+  font-family: 'More Sugar';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/more-sugar.woff') format('woff');
+}
+
+/* Lato – lokal */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/lato-regular.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/lato-regular-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/lato-bold.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/lato-bold-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -242,7 +282,14 @@ html, body {
   scale: 1;
 }
 
-.circle-float:hover .circle-card,
+/* Hover-Flip nur auf echten Pointer-Geräten (nicht auf Touch-Mobile) */
+@media (hover: hover) {
+  .circle-float:hover .circle-card {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Flip via JS-Klasse funktioniert auf allen Geräten */
 .circle-float.flipped .circle-card {
   transform: rotateY(180deg);
 }
@@ -496,7 +543,7 @@ footer {
 }
 
 .job-header-logo img {
-  height: 70px;
+  height: 105px;
   width: auto;
 }
 
@@ -583,6 +630,15 @@ footer {
   margin-top: 2rem;
 }
 
+.beratung-hinweis {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 2rem;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid #ddd;
+}
+
 .job-download {
   text-align: center;
   margin-top: 3rem;
@@ -634,6 +690,68 @@ footer {
   line-height: 1.7;
 }
 
+.legal-page {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.legal-page h1 {
+  font-family: 'More Sugar', cursive;
+  font-size: 2rem;
+  color: var(--green);
+  margin-bottom: 2rem;
+}
+
+.legal-page section {
+  margin-bottom: 2rem;
+}
+
+.legal-page h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legal-page p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.legal-page a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.legal-page a:hover {
+  text-decoration: underline;
+}
+
+.legal-page h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.legal-page ul {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  padding-left: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-page section + section {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1.5rem;
+}
+
 /* ===================================================
    RESPONSIVE
    =================================================== */
@@ -660,10 +778,149 @@ footer {
   }
 }
 
+/* Mobile: Orbit → Karten-Grid */
+@media (max-width: 600px) {
+  /* Gleicher Abstand oben wie zwischen Logo und Karten (~21px) */
+  #services {
+    padding-top: 0;
+  }
+
+  .services-scaler {
+    height: auto;
+    overflow: visible;
+    padding: 1.3rem 1rem 2rem;
+    align-items: flex-start;
+  }
+
+  /* Rückseite soll keine Pointer-Events abfangen solange Karte nicht gedreht ist */
+  .card-back {
+    pointer-events: none;
+  }
+  .circle-float.flipped .card-back {
+    pointer-events: auto;
+  }
+
+  /* Orbit-Scaling komplett deaktivieren */
+  .services-container {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .orbit-svg { display: none; }
+
+  /* Logo im Grid-Flow zentriert */
+  .logo-center {
+    position: static;
+    transform: none;
+    width: 200px;
+    height: 200px;
+    grid-column: 1 / -1;
+    margin: 0 auto 0.5rem;
+    opacity: 1 !important;
+    scale: 1 !important;
+    background: transparent;
+    mix-blend-mode: multiply;
+  }
+
+  /* Kreise als normale Block-Elemente */
+  .circle-wrapper {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    height: 300px;
+  }
+
+  /* Reihenfolge im Grid: bunt gemischt */
+  /* nth-child zählt alle Kinder von .services-container:
+     1=svg, 2=logo-center, 3=Beratung(pink), 4=Ambulante(yellow),
+     5=WerWirSind(green), 6=Startup(pink), 7=Begleiteter(yellow), 8=Erinnerung(green) */
+  .services-container > .circle-wrapper:nth-child(3) { order: 1; } /* pink   Beratung  → Pos 1 oben links  */
+  .services-container > .circle-wrapper:nth-child(5) { order: 2; } /* green  WerWirSind → Pos 2 oben rechts */
+  .services-container > .circle-wrapper:nth-child(8) { order: 3; } /* green  Erinnerung → Pos 3 Mitte links  */
+  .services-container > .circle-wrapper:nth-child(4) { order: 4; } /* yellow Ambulante  → Pos 4 Mitte rechts */
+  .services-container > .circle-wrapper:nth-child(7) { order: 5; } /* yellow Begleiteter→ Pos 5 unten links  */
+  .services-container > .circle-wrapper:nth-child(6) { order: 6; } /* pink   Startup    → Pos 6 unten rechts */
+
+  .circle-float {
+    width: 100%;
+    height: 100%;
+    animation: none;
+    transform: none !important;
+  }
+
+  .circle-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .card-front,
+  .card-back {
+    border-radius: 20px;
+  }
+
+  .card-front span {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .card-back {
+    padding: 0.9rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    justify-content: center;
+  }
+
+  .card-back p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* Pink: Text mittig wie alle anderen Karten, Button absolut am unteren Rand */
+  .pink .card-back {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  /* Button aus Flex-Flow herausnehmen, absolut am unteren Rand */
+  .pink .card-back .cta-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 8px;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 0.88rem;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .cta-btn {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    margin-top: 6px;
+  }
+}
+
 /* Footer */
 @media (max-width: 600px) {
   .footer-inner {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .footer-logo {
@@ -674,6 +931,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -683,7 +941,7 @@ footer {
     flex-direction: column-reverse;
   }
 
-  .job-header-logo img { height: 50px; }
+  .job-header-logo img { height: 75px; }
 
   .job-page-wrap { padding: 1.5rem 1.2rem 3rem; }
 }

@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Claude-Konfiguration
+.claude/
+CLAUDE.md
+
+# Word-Referenzdokumente und Original-PNG (nur lokal, nicht für GitHub)
+references/*.docx
+references/*.png
