@@ -1,3 +1,6 @@
+# Zugangsdaten (niemals committen)
+.env
+
 # macOS
 .DS_Store
 **/.DS_Store
